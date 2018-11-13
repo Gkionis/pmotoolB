@@ -100,60 +100,64 @@
 <br>
 
     <!-- Heading -->
-        <h1 class="govuk-heading-xl">Projects management tool</h1>
+        <h1 class="govuk-heading-xl"> Manage portfolio</h1>
         </main>
     </div>
     </div>
+
     <div class="govuk-width-container">
-    <div class="govuk-inset-text">
-      Choose between creating a new project, edit an existing one or manage your portfolio.
-    </div>
+    <table class="govuk-table">
+    <caption class="govuk-table__caption">Projects list</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header" scope="col">Project</th>
+        <th class="govuk-table__header" scope="col">Action</th>
+      </tr>
+    </thead>
   </div>
-
-    <!-- Project admin split buttons -->
-
-
-    <div class="govuk-width-container">
-        <main class="govuk-main-wrapper">
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-one-third">
-            <h1 class="govuk-heading-m">Create new Project</h1>
-            <p class="govuk-body">This is where you can create a new project</p>
-            <div class="govuk-width-container"
-            <button type="submit" class="govuk-button">
-            <a href="create.html" role="button" class="govuk-button govuk-button">
-              Create
-            </a>
-          </button>
-          </div>
-        </div>
-          <div class="govuk-grid-column-one-third">
-            <h1 class="govuk-heading-m">Edit a Project</h1>
-            <p class="govuk-body">This is where you can edit an existing project</p>
-            <div class="govuk-width-container"
-            <button type="submit" class="govuk-button">
-            <a href="edit.html" role="button" class="govuk-button govuk-button">
-              Edit
-            </a>
-          </button>
-          </div>
-        </div>
-        <div class="govuk-grid-column-one-third">
-            <h1 class="govuk-heading-m">Manage Portfolios</h1>
-            <p class="govuk-body">This is where you can manage your portfolio</p>
-            <div class="govuk-width-container"
-            <button type="submit" class="govuk-button">
-            <a href="manage.html" role="button" class="govuk-button govuk-button">
-              Manage
-            </a>
-          </button>
-          </div>
-        </div>
-
-      </main>
+  <div class="govuk-width-container">
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header" scope="row">Project Alpha</th>
+        <td class="govuk-table__cell">
+          <a href="edit.html" role="button" class="govuk-button--start">
+            Edit
+          </a>
+        </td>
+      </tr>
     </div>
+    <div class="govuk-width-container">
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header" scope="row">Project Beta</th>
+        <td class="govuk-table__cell">
+          <a href="edit.html" role="button" class="govuk-button--start">
+            Edit
+          </a>
+        </td>
+      </tr>
+    </div>
+    <div class="govuk-width-container">
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header" scope="row">Project Gamma</th>
+        <td class="govuk-table__cell">
+          <a href="edit.html" role="button" class="govuk-button--start">
+            Edit
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
 
-
+<div class="govuk-width-container">
+  <a href="#" role="button" class="govuk-button">
+  Add
+</a>
+<br>
+<a href="admin.html" class="govuk-back-link">Back</a>
+</div>
+<br>
   </body>
     <!-- Page footer -->
     <footer class="govuk-footer " role="contentinfo">
