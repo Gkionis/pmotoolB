@@ -43,196 +43,6 @@
     font-display: fallback
 }
 
-/*
-    thumbHeight = 20px,
-    thumbBorderWidth = 4px,
-    trackColor = #ccc,
-    activeTrackColor = #777,
-    trackHeight = 4px,
-    thumbColor = red,
-    activeThumbColor = darkOrange
-  */
-
-input[type="range"] {
-    width: 100%;
-    height: 28px; /* thumbHeight + (2 x thumbBorderWidth)*/
-    -webkit-appearance: none; /*remove the line*/
-    outline: none;
-    /*background-color:cyan;*/
-    border: 0; /*for firefox on android*/
-    padding: 0 8px; /*for IE*/
-    margin: 8px 0;
-}
-
-/*chrome and opera*/
-input[type="range"]::-webkit-slider-runnable-track {
-    background: #ccc; /*trackColor*/
-    height: 4px; /*trackHeight*/
-    border-radius: 4px; /*trackHeight*/
-    transition: 0.3s;
-}
-
-input[type="range"]:hover::-webkit-slider-runnable-track,
-input[type="range"]:focus::-webkit-slider-runnable-track {
-    background: #777; /*activeTrackColor*/
-}
-
-input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    background: darkOrange; /*thumbColor*/
-    width: 28px; /* thumbHeight + (2 x thumbBorderWidth)*/
-    height: 28px; /* thumbHeight + (2 x thumbBorderWidth)*/
-    border-radius: 50%;
-    margin-top: -12px; /* -[thumbHeight + (2 x thumbBorderWidth) - trackHeight]/2*/
-    cursor: pointer;
-    display: inline-block;
-    z-index: 3;
-    border: 4px solid #fff; /*border-width should be equal to thumbBorderWidth if you want same border width across all browsers and border-color should match the background*/
-    transition: 0.3s;
-}
-
-
-input[type="range"]:hover::-webkit-slider-thumb,
-input[type="range"]:focus::-webkit-slider-thumb {
-    background: darkGreen; /*activeThumbColor*/
-}
-
-/*firefox*/
-input[type="range"]::-moz-focus-outer {
-    border: 0;
-}
-
-input[type="range"]::-moz-range-track {
-    background: #ccc; /*trackColor*/
-    height: 4px; /*trackHeight*/
-    border-radius: 4px; /*trackHeight*/
-    /*background isn't animatable, so can't use transition*/
-}
-
-input[type="range"]:hover::-moz-range-track,
-input[type="range"]:focus::-moz-range-track {
-    background: #777; /*activeTrackColor*/
-}
-
-input[type="range"]::-moz-range-thumb {
-    background: darkOrange; /*thumbColor*/
-    width: 20px; /*thumbHeight*/
-    height: 20px; /*thumbHeight*/
-    border-radius: 50%;
-    cursor: pointer;
-    border: 4px solid #fff; /*border-width = thumbBorderWidth, border-color should match the background*/
-}
-
-input[type="range"]:hover::-moz-range-thumb,
-input[type="range"]:focus::-moz-range-thumb {
-    background: darkGreen; /*activeThumbColor*/
-}
-
-input[type="range"]::-moz-range-progress {
-    background: darkOrange; /*thumbColor*/
-    border-radius: 4px; /*trackHeight*/
-    height: 4px; /*trackHeight*/
-}
-
-input[type="range"]:hover::-moz-range-progress,
-input[type="range"]:focus::-moz-range-progress {
-    background: darkGreen; /*activeThumbColor*/
-}
-
-/*edge and IE*/
-input[type="range"]::-ms-track {
-    background: #ccc; /*trackColor*/
-    height: 4px; /*trackHeight*/
-    border-radius: 4px; /*trackHeight*/
-    border: none;
-    color: transparent;
-}
-
-input[type="range"]:hover::-ms-track,
-input[type="range"]:focus::-ms-track {
-    background: #777; /*activeTrackColor*/
-}
-
-input[type="range"]::-ms-thumb {
-    background: darkOrange; /*thumbColor*/
-    width: 20px; /*thumbHeight*/
-    height: 20px; /*thumbHeight*/
-    border-radius: 50%;
-    border: none;
-    margin: 0 4px 0; /*0 thumbBorderWidth 0*/
-    box-shadow: 0 0 0 4px #fff; /*0 0 0 thumbBorderWidth #fff, box-shadow color should match the background*/
-    /*cursor:pointer; doesn't work*/
-}
-
-input[type="range"]:hover::-ms-thumb,
-input[type="range"]:focus::-ms-thumb {
-    background: darkGreen; /*activeThumbColor*/
-}
-
-input[type="range"]::-ms-tooltip {
-    display: none; /*tooltip makes thumb sliding lagy*/
-}
-
-input[type="range"]::-ms-fill-lower {
-    background: darkOrange; /*thumbColor*/
-    border-radius: 4px; /*trackHeight*/
-}
-
-input[type="range"]:hover::-ms-fill-lower,
-input[type="range"]:focus::-ms-fill-lower {
-    background: darkGreen; /*activeThumbColor*/
-}
-
-.vertically-stacked-slider {
-    padding: 8px;
-}
-
-.vertically-stacked-slider > input[type="range"] {
-    padding: 0;
-}
-
-.horizontally-stacked-slider {
-    display: flex;
-    align-items: center;
-}
-
-.horizontally-stacked-slider > .title {
-    flex: 1;
-    padding: 8px;
-}
-
-.horizontally-stacked-slider > input[type="range"] {
-    flex: 1;
-}
-
-output {
-  position: absolute;
-  background-image: linear-gradient(top, #444444, #999999);
-  width: 40px;
-  height: 30px;
-  text-align: center;
-  color: white;
-  border-radius: 10px;
-  display: inline-block;
-  bottom: 175%;
-  left: 0;
-  margin-left: -1%;
-}
-output:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-top: 10px solid #999999;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  margin-top: -1px;
-}
-
-
 @media print {
     .govuk-link {
         font-family: sans-serif
@@ -2033,6 +1843,34 @@ only screen and (min-resolution:192dpi) {
     margin-bottom: 0
 }
 
+.govuk-character-count {
+    margin-bottom: 20px
+}
+
+@media (min-width:40.0625em) {
+    .govuk-character-count {
+        margin-bottom: 30px
+    }
+}
+
+.govuk-character-count .govuk-form-group,
+.govuk-character-count .govuk-textarea {
+    margin-bottom: 5px
+}
+
+.govuk-character-count .govuk-textarea--error {
+    padding: 3px
+}
+
+.govuk-character-count__message {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+.govuk-character-count__message--disabled {
+    visibility: hidden
+}
+
 .govuk-input {
     font-family: nta, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -2556,9 +2394,6 @@ only screen and (min-resolution:192dpi) {
     vertical-align: top
 }
 
-
-
--ms-flex-wrap: wrap;
 @media (max-width:48.0525em) {
     .govuk-footer__licence-logo {
         margin-bottom: 15px
@@ -2632,6 +2467,7 @@ only screen and (min-resolution:192dpi) {
     display: flex;
     margin-right: -15px;
     margin-left: -15px;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap
 }
 
@@ -2639,7 +2475,6 @@ only screen and (min-resolution:192dpi) {
     display: inline-block;
     margin-right: 15px;
     margin-bottom: 30px;
-  }
     margin-left: 15px;
     vertical-align: top;
     -webkit-box-flex: 1;
@@ -2781,7 +2616,9 @@ only screen and (min-resolution:192dpi) {
     font-weight: 400;
     font-size: 18px;
     font-size: 1.125rem;
-    line-height: 1.11111
+    line-height: 1.11111;
+    display: inline-table;
+    padding-right: 10px
 }
 
 @media print {
@@ -2795,6 +2632,7 @@ only screen and (min-resolution:192dpi) {
         font-size: 24px;
         font-size: 1.5rem;
         line-height: 1.25
+    }
 }
 
 @media print {
@@ -2894,7 +2732,6 @@ only screen and (min-resolution:192dpi) {
 
 @media (min-width:40.0625em) {
     .govuk-header__logo {
-      -moz-osx-font-smoothing: grayscale;
         margin-bottom: 10px
     }
 }
@@ -3063,6 +2900,7 @@ only screen and (min-resolution:192dpi) {
 .govuk-header__navigation-item a {
     font-family: nta, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-weight: 700;
     font-size: 14px;
     font-size: .875rem;
@@ -3320,66 +3158,6 @@ only screen and (min-resolution:192dpi) {
     outline-offset: -2px;
     color: #fff;
     background-color: #005ea5;
-    letter-spacing: 1px;
-    text-decoration: none;
-    text-transform: uppercase
-}
-
-.govuk-tag-red {
-    font-family: nta, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 700;
-    font-size: 14px;
-    font-size: .875rem;
-    line-height: 1.25;
-    display: inline-block;
-    padding: 4px 8px;
-    padding-bottom: 1px;
-    outline: 2px solid transparent;
-    outline-offset: -2px;
-    color: #fff;
-    background-color: #df3034;
-    letter-spacing: 1px;
-    text-decoration: none;
-    text-transform: uppercase
-}
-
-.govuk-tag-amber {
-    font-family: nta, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 700;
-    font-size: 14px;
-    font-size: .875rem;
-    line-height: 1.25;
-    display: inline-block;
-    padding: 4px 8px;
-    padding-bottom: 1px;
-    outline: 2px solid transparent;
-    outline-offset: -2px;
-    color: #fff;
-    background-color: #f47738;
-    letter-spacing: 1px;
-    text-decoration: none;
-    text-transform: uppercase
-}
-
-.govuk-tag-green {
-    font-family: nta, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 700;
-    font-size: 14px;
-    font-size: .875rem;
-    line-height: 1.25;
-    display: inline-block;
-    padding: 4px 8px;
-    padding-bottom: 1px;
-    outline: 2px solid transparent;
-    outline-offset: -2px;
-    color: #fff;
-    background-color: #006435;
     letter-spacing: 1px;
     text-decoration: none;
     text-transform: uppercase
@@ -3847,6 +3625,7 @@ only screen and (min-resolution:192dpi) {
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.25;
+    color: #0b0c0c;
     width: 40px;
     margin-bottom: 10px;
     text-align: center
@@ -3869,7 +3648,8 @@ only screen and (min-resolution:192dpi) {
 @media print {
     .govuk-radios__divider {
         font-size: 14pt;
-        line-height: 1.15
+        line-height: 1.15;
+        color: #000
     }
 }
 
@@ -3903,6 +3683,7 @@ only screen and (min-resolution:192dpi) {
     font-size: 1rem;
     line-height: 1.25;
     box-sizing: border-box;
+    max-width: 100%;
     height: 40px;
     padding: 5px;
     border: 2px solid #0b0c0c
@@ -3946,15 +3727,15 @@ only screen and (min-resolution:192dpi) {
 }
 
 .govuk-skip-link {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    white-space: nowrap;
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    white-space: nowrap !important;
     font-family: nta, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -3967,15 +3748,15 @@ only screen and (min-resolution:192dpi) {
 
 .govuk-skip-link:active,
 .govuk-skip-link:focus {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: inherit;
-    overflow: visible;
-    clip: auto;
-    -webkit-clip-path: none;
-    clip-path: none;
-    white-space: inherit
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    margin: inherit !important;
+    overflow: visible !important;
+    clip: auto !important;
+    -webkit-clip-path: none !important;
+    clip-path: none !important;
+    white-space: inherit !important
 }
 
 @media print {
@@ -4206,17 +3987,17 @@ only screen and (min-resolution:192dpi) {
 }
 
 .govuk-warning-text__assistive {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    border: 0;
-    white-space: nowrap
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    border: 0 !important;
+    white-space: nowrap !important
 }
 
 .govuk-warning-text__icon {
@@ -4264,34 +4045,34 @@ only screen and (min-resolution:192dpi) {
 }
 
 .govuk-visually-hidden {
-    padding: 0;
-    border: 0
+    padding: 0 !important;
+    border: 0 !important
 }
 
 .govuk-visually-hidden,
 .govuk-visually-hidden-focusable {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    white-space: nowrap
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    white-space: nowrap !important
 }
 
 .govuk-visually-hidden-focusable:active,
 .govuk-visually-hidden-focusable:focus {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: inherit;
-    overflow: visible;
-    clip: auto;
-    -webkit-clip-path: none;
-    clip-path: none;
-    white-space: inherit
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    margin: inherit !important;
+    overflow: visible !important;
+    clip: auto !important;
+    -webkit-clip-path: none !important;
+    clip-path: none !important;
+    white-space: inherit !important
 }
 
 .govuk-\ !-display-inline {
